@@ -6,77 +6,77 @@
         {
             "constraints": [
                 {
-                    "obj 1": "35",
-                    "obj 2": "40",
+                    "obj 1": "G27",
+                    "obj 2": "G28",
                     "relation": null
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "24",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "25",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "26",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "27",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "28",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "29",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "30",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "24",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "25",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "26",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "27",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "28",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "29",
                     "relation": "dc"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "30",
                     "relation": "dc"
                 },
@@ -192,242 +192,242 @@
         {
             "constraints": [
                 {
-                    "obj 1": "7",
-                    "obj 2": "35",
+                    "obj 1": "G4",
+                    "obj 2": "G27",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
-                    "obj 2": "40",
+                    "obj 1": "G4",
+                    "obj 2": "G28",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "24",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "25",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "26",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "27",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "28",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "29",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "30",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
-                    "obj 2": "35",
+                    "obj 1": "G7",
+                    "obj 2": "G27",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
-                    "obj 2": "40",
+                    "obj 1": "G7",
+                    "obj 2": "G28",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "24",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "25",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "26",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "27",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "28",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "29",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "30",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "0",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "1",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "2",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "8",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "13",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "14",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "15",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "16",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "17",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "18",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "19",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "20",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "21",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "22",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "23",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "0",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "1",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "2",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "8",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "13",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "14",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "15",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "16",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "17",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "18",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "19",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "20",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "21",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "22",
                     "relation": "disjoint"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "23",
                     "relation": "disjoint"
                 },
@@ -964,12 +964,12 @@
             "constraints": [
                 {
                     "obj 1": "0",
-                    "obj 2": "35",
+                    "obj 2": "G27",
                     "relation": "nonAdjacent"
                 },
                 {
                     "obj 1": "0",
-                    "obj 2": "40",
+                    "obj 2": "G28",
                     "relation": "nonAdjacent"
                 },
                 {
@@ -1009,12 +1009,12 @@
                 },
                 {
                     "obj 1": "2",
-                    "obj 2": "35",
+                    "obj 2": "G27",
                     "relation": "left"
                 },
                 {
                     "obj 1": "2",
-                    "obj 2": "40",
+                    "obj 2": "G28",
                     "relation": "left"
                 },
                 {
@@ -1054,12 +1054,12 @@
                 },
                 {
                     "obj 1": "8",
-                    "obj 2": "35",
+                    "obj 2": "G27",
                     "relation": "nonAdjacent"
                 },
                 {
                     "obj 1": "8",
-                    "obj 2": "40",
+                    "obj 2": "G28",
                     "relation": "nonAdjacent"
                 },
                 {
@@ -1099,12 +1099,12 @@
                 },
                 {
                     "obj 1": "16",
-                    "obj 2": "35",
+                    "obj 2": "G27",
                     "relation": "nonAdjacent"
                 },
                 {
                     "obj 1": "16",
-                    "obj 2": "40",
+                    "obj 2": "G28",
                     "relation": "nonAdjacent"
                 },
                 {
@@ -1144,12 +1144,12 @@
                 },
                 {
                     "obj 1": "20",
-                    "obj 2": "35",
+                    "obj 2": "G27",
                     "relation": "nonAdjacent"
                 },
                 {
                     "obj 1": "20",
-                    "obj 2": "40",
+                    "obj 2": "G28",
                     "relation": "nonAdjacent"
                 },
                 {
@@ -1189,12 +1189,12 @@
                 },
                 {
                     "obj 1": "23",
-                    "obj 2": "35",
+                    "obj 2": "G27",
                     "relation": "nonAdjacent"
                 },
                 {
                     "obj 1": "23",
-                    "obj 2": "40",
+                    "obj 2": "G28",
                     "relation": "left"
                 },
                 {
@@ -1239,157 +1239,157 @@
         {
             "constraints": [
                 {
-                    "obj 1": "7",
-                    "obj 2": "11",
+                    "obj 1": "G4",
+                    "obj 2": "G7",
                     "relation": "front_of"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "0",
                     "relation": "right_of"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "1",
                     "relation": "front_of"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "2",
                     "relation": "right_of"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "8",
                     "relation": "left_of"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "13",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "14",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "15",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "16",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "17",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "18",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "19",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "20",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "21",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "22",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "23",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "0",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "1",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "2",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "8",
                     "relation": "left_of"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "13",
                     "relation": "half_right"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "14",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "15",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "16",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "17",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "18",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "19",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "20",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "21",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "22",
                     "relation": "nonAdjacent"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "23",
                     "relation": "nonAdjacent"
                 },
@@ -1925,157 +1925,157 @@
         {
             "constraints": [
                 {
-                    "obj 1": "7",
-                    "obj 2": "11",
+                    "obj 1": "G4",
+                    "obj 2": "G7",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "0",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "1",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "2",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "8",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "13",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "14",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "15",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "16",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "17",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "18",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "19",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "20",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "21",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "22",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "7",
+                    "obj 1": "G4",
                     "obj 2": "23",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "0",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "1",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "2",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "8",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "13",
                     "relation": "connected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "14",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "15",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "16",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "17",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "18",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "19",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "20",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "21",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "22",
                     "relation": "disconnected"
                 },
                 {
-                    "obj 1": "11",
+                    "obj 1": "G7",
                     "obj 2": "23",
                     "relation": "disconnected"
                 },
@@ -2611,67 +2611,67 @@
         {
             "constraints": [
                 {
-                    "obj 1": "35",
-                    "obj 2": "40",
+                    "obj 1": "G27",
+                    "obj 2": "G28",
                     "relation": "overlaps"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "25",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "26",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "27",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "28",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "29",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "35",
+                    "obj 1": "G27",
                     "obj 2": "30",
                     "relation": "overlaps"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "25",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "26",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "27",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "28",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "29",
                     "relation": "before"
                 },
                 {
-                    "obj 1": "40",
+                    "obj 1": "G28",
                     "obj 2": "30",
                     "relation": "overlaps"
                 },
@@ -2758,7 +2758,7 @@
     "features": [
         {
             "mapType": "Sketch",
-            "id": "7",
+            "id": "G4",
             "sid": "S7",
             "isRoute": null,
             "feat_type": null,
@@ -2771,7 +2771,7 @@
         },
         {
             "mapType": "Sketch",
-            "id": "6",
+            "id": "G5",
             "sid": "S6",
             "isRoute": null,
             "feat_type": null,
@@ -2784,7 +2784,7 @@
         },
         {
             "mapType": "Sketch",
-            "id": "11",
+            "id": "G7",
             "sid": "S11",
             "isRoute": null,
             "feat_type": null,
@@ -2797,7 +2797,7 @@
         },
         {
             "mapType": "Sketch",
-            "id": "12",
+            "id": "G8",
             "sid": "S12",
             "isRoute": null,
             "feat_type": null,
@@ -2810,7 +2810,7 @@
         },
         {
             "mapType": "Sketch",
-            "id": "35",
+            "id": "G27",
             "sid": "S35",
             "isRoute": null,
             "feat_type": "Landmark",
@@ -2823,7 +2823,7 @@
         },
         {
             "mapType": "Sketch",
-            "id": "40",
+            "id": "G28",
             "sid": "S40",
             "isRoute": null,
             "feat_type": "Landmark",

@@ -19,6 +19,7 @@ from shapely import geometry, ops
 from shapely.geometry import Point, Polygon, shape
 from shapely import LineString, MultiPoint, Polygon
 from shapely.geometry import Polygon, LineString, MultiLineString
+from shapely.ops import unary_union
 from matplotlib import pyplot as plt
 import shapely.wkt
 from math import sqrt
@@ -407,41 +408,47 @@ def spatial_transformation(routedata,sketchroutedata):
         return connected_streets, connected_street_points
 
 
-    # Call the function and get the results
-    connected_streets, connected_street_points = find_connected_streets(loop_ids, data_ip)
-    
-    connected_streets_st, st_points = find_connected_streets(st_ids, data_ip)
-    
-    # Iterate through the lists in reverse order to safely remove elements
-    for index in range(len(connected_streets_st) - 1, -1, -1):
-        if len(connected_streets_st[index]) < 4:
-            # Remove the sublist from both lists if it has fewer than 4 elements
-            del connected_streets_st[index]
-            del st_ids[index]
+    ng_ids = [] 
+    connected_streets = []
+    connected_streets_st = []
+    connected_street_points =[]
+    st_points = []
+    if  loop_ids and st_ids: 
+        # Call the function and get the results
+        connected_streets, connected_street_points = find_connected_streets(loop_ids, data_ip)
+        connected_streets_st, st_points = find_connected_streets(st_ids, data_ip)
 
-    # Print the results
-    print("Connected Streets IDs:", connected_streets)
-    print("Connected Streets points:", connected_street_points)
-    print("Connected Streets straight IDs:", connected_streets_st)
-    print("Connected Streets straight points:", st_points)
+        # Iterate through the lists in reverse order to safely remove elements
+        for index in range(len(connected_streets_st) - 1, -1, -1):
+            if len(connected_streets_st[index]) < 4:
+                # Remove the sublist from both lists if it has fewer than 4 elements
+                del connected_streets_st[index]
+                del st_ids[index]
 
-    # Flatten connected_streets and connected_streets_st for easier comparison
-    flattened_connected_streets = [item for sublist in connected_streets for item in sublist]
-    flattened_connected_streets_st = [item for sublist in connected_streets_st for item in sublist]
+        # Print the results
+        print("Connected Streets IDs:", connected_streets)
+        print("Connected Streets points:", connected_street_points)
+        print("Connected Streets straight IDs:", connected_streets_st)
+        print("Connected Streets straight points:", st_points)
 
-    # Create the final list by excluding elements in connected_streets and connected_streets_st
-    ng_ids = [
-        [item for item in sublist if item not in flattened_connected_streets and item not in flattened_connected_streets_st]
-        for sublist in ng_id_1
-    ]
+        # Flatten connected_streets and connected_streets_st for easier comparison
+        flattened_connected_streets = [item for sublist in connected_streets for item in sublist]
+        flattened_connected_streets_st = [item for sublist in connected_streets_st for item in sublist]
 
-    # Remove empty sublists
-    ng_ids = [sublist for sublist in ng_ids if sublist]
-    
-    print(ng_ids)
+        # Create the final list by excluding elements in connected_streets and connected_streets_st
+        ng_ids = [
+            [item for item in sublist if item not in flattened_connected_streets and item not in flattened_connected_streets_st]
+            for sublist in ng_id_1
+        ]
+
+        # Remove empty sublists
+        ng_ids = [sublist for sublist in ng_ids if sublist]
+        
+        print(ng_ids)
+    else:
+        ng_ids = ng_id_1
     
     # breakpoint()
-
     poly = []
     line = []
     point = []
@@ -608,6 +615,8 @@ def spatial_transformation(routedata,sketchroutedata):
     s_a2e_ids_p = []
     s_rac_ids =[]
     s_jm_ids = []
+    s_ng_ids_p_map = {}
+    s_ng_ids_l_map = {}
     
     def is_in_nested_list(nested_list, value):
         return any(value in sublist for sublist in nested_list)
@@ -619,10 +628,12 @@ def spatial_transformation(routedata,sketchroutedata):
                 base_align_value = sub_value["BaseAlign"]["0"][0]
                 sketch_align_value = sub_value["SketchAlign"]["0"]
                 
-                if base_align_value in ng_ids_p:
-                    s_ng_ids_p.append(sketch_align_value)
-                elif base_align_value in ng_ids_l:
-                    s_ng_ids_l.append(sketch_align_value)
+                s_ng_ids_p_map[base_align_value] = sketch_align_value
+                s_ng_ids_l_map[base_align_value] = sketch_align_value
+                # if base_align_value in ng_ids_p:
+                #     s_ng_ids_p.append(sketch_align_value)
+                # elif base_align_value in ng_ids_l:
+                #     s_ng_ids_l.append(sketch_align_value)
                 if is_in_nested_list(a2e_ids_p,base_align_value):
                     s_a2e_ids_p.append(sketch_align_value)
                 if is_in_nested_list(a2e_ids_l, base_align_value):
@@ -631,13 +642,18 @@ def spatial_transformation(routedata,sketchroutedata):
                     s_rac_ids.append(sketch_align_value)
                 if is_in_nested_list(connected_streets_st, base_align_value):
                     s_jm_ids.append(sketch_align_value)
+                    
+    s_ng_ids_p = [s_ng_ids_p_map[ng_id] for ng_id in ng_ids_p if ng_id in s_ng_ids_p_map]
+    s_ng_ids_l = [s_ng_ids_l_map[ng_id] for ng_id in ng_ids_l if ng_id in s_ng_ids_l_map]
     
     features = []
-    
+    # breakpoint()
     # amalgamation .................................................................
     for x, ids, sids in zip(poly_res, amal_ids, s_amal_ids):
         mpt = geometry.MultiPolygon(x)
         res = mpt.convex_hull.wkt
+        # merged_polygon = unary_union(mpt)  # Use unary_union to merge polygons without altering shape
+        # res = merged_polygon.wkt
         g1_a = shapely.wkt.loads(res)
         features.append(Feature(geometry=g1_a, properties={"genType": "Amalgamation", "BaseAlign": ids, "SketchAlign":sids[0]}))
 
@@ -654,7 +670,7 @@ def spatial_transformation(routedata,sketchroutedata):
         collapse = x[0].centroid
         g1_c = shapely.wkt.loads(str(collapse))
         features.append(Feature(geometry=g1_c, properties={"genType": "Collapse", "BaseAlign": ids,"SketchAlign":sids[0]}))
-        
+    
     def is_connected(multi_line):
         merged = ops.linemerge(multi_line)
         if isinstance(merged, geometry.LineString):
@@ -662,25 +678,33 @@ def spatial_transformation(routedata,sketchroutedata):
         elif isinstance(merged, geometry.MultiLineString) and len(merged.geoms) == 1:
             return True
         return False
-
-    # Abstraction to show existence Streets and buildings ..........................
-    for x, ids, sids in zip(a2e_l_res[0], a2e_ids_l, s_a2e_ids_l):
-        multi_line = geometry.MultiLineString(x)
-        if is_connected(multi_line):
-            merged_line = ops.linemerge(multi_line)
-            g1_a2e = geometry.shape(merged_line)
-            gen_type = "Multi-MultiOmissionMerge"
-            features.append(Feature(geometry=g1_a2e, properties={"genType3": gen_type, "BaseAlign": ids, "SketchAlign":sids}))
-        else:
-            g1_a2e = multi_line
-            gen_type = "Abstraction to show existence"
-            features.append(Feature(geometry=g1_a2e, properties={"genType": gen_type, "BaseAlign":  ids, "SketchAlign":sids}))
     
-    for x, ids, sids in zip(a2e_p_res[0], a2e_ids_p, s_a2e_ids_p):
-        mpt = geometry.MultiPolygon(x)
-        res = mpt.convex_hull.wkt
-        g1_a2e = shapely.wkt.loads(res)
-        features.append(Feature(geometry=g1_a2e, properties={"genType": "Abstraction to show existence", "BaseAlign": ids, "SketchAlign":sids}))
+    # Abstraction to show existence Streets and buildings ..........................
+    if a2e_l_res and a2e_l_res[0]:
+        for x, ids, sids in zip(a2e_l_res[0], a2e_ids_l, s_a2e_ids_l):
+            if len(x) == 0: # Skip empty inputs
+                continue
+            multi_line = geometry.MultiLineString(x)
+            if is_connected(multi_line):
+                merged_line = ops.linemerge(multi_line)
+                g1_a2e = geometry.shape(merged_line)
+                gen_type = "Multi-MultiOmissionMerge"
+                features.append(Feature(geometry=g1_a2e, properties={"genType3": gen_type, "BaseAlign": ids, "SketchAlign":sids}))
+            else:
+                g1_a2e = multi_line
+                gen_type = "Abstraction to show existence"
+                features.append(Feature(geometry=g1_a2e, properties={"genType": gen_type, "BaseAlign":  ids, "SketchAlign":sids}))
+                
+    if a2e_p_res and a2e_p_res[0]:
+        for x, ids, sids in zip(a2e_p_res[0], a2e_ids_p, s_a2e_ids_p):
+            if len(x) == 0: # Skip empty inputs
+                continue
+            mpt = geometry.MultiPolygon(x)
+            # res = mpt.convex_hull.wkt
+            merged_polygon = unary_union(mpt)  # Use unary_union to merge polygons without altering shape
+            res = merged_polygon.wkt
+            g1_a2e = shapely.wkt.loads(res)
+            features.append(Feature(geometry=g1_a2e, properties={"genType": "Abstraction to show existence", "BaseAlign": ids, "SketchAlign":sids}))
 
     # No Generalization .............................................................
     for x, ids, sids in zip(ng_res_l, ng_ids_l, s_ng_ids_l):
@@ -689,7 +713,7 @@ def spatial_transformation(routedata,sketchroutedata):
         line = shapely.geometry.LineString(x[0])
         wkt_string = line.wkt
         features.append(Feature(geometry=shapely.wkt.loads(wkt_string), properties={"genType": "No generalization", "BaseAlign": ids,"SketchAlign":sids}))
-        
+   
     for x, ids, sids in zip(ng_res_p, ng_ids_p, s_ng_ids_p):
         if len(x) == 0: # Skip empty inputs
             continue
@@ -720,7 +744,7 @@ def spatial_transformation(routedata,sketchroutedata):
                 return 'connected'
             else:
                 return 'not connected'
-    
+
     def find_features(data_ip, loop_ids, features):
         rac_l_res = []
         

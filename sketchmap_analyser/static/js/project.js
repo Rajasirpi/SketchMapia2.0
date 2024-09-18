@@ -543,7 +543,12 @@ function generalizeMap() {
                     console.log("Yes roundabout")
                 }
                 if(item.properties.mapType == "Sketch"){
-                    item.properties.id = item.properties.id.toString();
+                    if (item.properties.groupID) {
+                        const groupidNumeric = String(item.properties.groupID).replace(/\D/g, ''); // Extract numeric part
+                        item.properties.id = groupidNumeric ? 'G' + groupidNumeric : ''; // Prefix 'g' to the numeric value
+                    } else {
+                        item.properties.id = item.properties.id.toString();
+                    }
                 if(item.properties.otype == "CircleMarker"){
                     item.properties.feat_type="Landmark";
                     }
@@ -552,12 +557,25 @@ function generalizeMap() {
                     if (item.properties.missing){
                         item.properties.id = randomnum;
                     }
-                    if (item.properties.SketchAlign){
+                    // if (item.properties.SketchAlign){
+                    //     const sketchAlignValue = Object.values(item.properties.SketchAlign);
+                    //     const numericPart = sketchAlignValue.toString().replace(/\D/g, ''); // Extract numeric part
+                    //     item.properties.id = numericPart ? String(numericPart) : '';
+                    //     // item.properties.id = String(Object.values(item.properties.SketchAlign)[0][0]).replace(/\D/g,'');
+                    // }  
+                    if (item.properties.SketchAlign) {
                         const sketchAlignValue = Object.values(item.properties.SketchAlign);
-                        const numericPart = sketchAlignValue.toString().replace(/\D/g, ''); // Extract numeric part
-                        item.properties.id = numericPart ? String(numericPart[0]) : '';
-                        // item.properties.id = String(Object.values(item.properties.SketchAlign)[0][0]).replace(/\D/g,'');
-                    }  
+                    
+                        // Check for 'groupid' property first
+                        if (item.properties.groupID) {
+                            const groupidNumeric = String(item.properties.groupID).replace(/\D/g, ''); // Extract numeric part
+                            item.properties.id = groupidNumeric ? 'G' + groupidNumeric : ''; // Prefix 'g' to the numeric value
+                        } else {
+                            // Fallback to use the first numeric value in SketchAlign
+                            const numericPart = sketchAlignValue.toString().replace(/\D/g, '');
+                            item.properties.id = numericPart ? String(numericPart) : '';
+                        }
+                    }
                     baseMapProc.push(item);
                     randomnum = randomnum + 1;
                 }
